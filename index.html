@@ -4,17 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Kamień, papier, nożyce</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="container">
-        <div id="buttons">
-            <button id="play-rock">Kamień</button>
-            <button id="play-paper">Papier</button>
-            <button id="play-scissors">Nożyce</button>
-        </div>
-        <div id="messages"></div>
+        <header>
+            <h1>Kamień, Nożyce, Papier</h1>
+            <p>Wybierz kamień, papier lub nozyce</p>
+            <p>Po prawej stronie wyświetli się ruch komputera</p>
+            <p>Na dole zobaczysz wynik</p>
+        </header>
+        <section class="game">
+
+            <div class="col col-6" id="player-move">
+                <h2>Twój ruch</h2>
+                <div class="wrapper">
+                    <button type="button" id="player-rock" aria-label="rock"><i class="far fa-hand-rock"></i></button>
+                    <button type="button" id="player-paper" aria-label="rock"><i class="far fa-hand-paper"></i></button>
+                    <button type="button" id="player-scissors" aria-label="rock"><i
+                            class="far fa-hand-scissors"></i></button>
+                </div>
+                <div id="player-input"></div>
+            </div>
+
+            <div class="col col-6" id="computer-move">
+                <h2>Ruch komputera</h2>
+                <button type="button" id="computer-rock" aria-label="rock"><i class="far fa-hand-rock"></i></button>
+                <button type="button" id="computer-paper" aria-label="rock"><i class="far fa-hand-paper"></i></button>
+                <button type="button" id="computer-scissors" aria-label="rock"><i
+                        class="far fa-hand-scissors"></i></button>
+                <div id="computer-input"></div>
+            </div>
+            <div class="col col-12" id="game-result">
+                <div id="result"></div>
+                <div id="counter"></div>
+            </div>
+
+        </section>
+        <footer>
+
+        </footer>
     </div>
     <script src="js/functions.js"></script>
     <script src="js/script.js"></script>

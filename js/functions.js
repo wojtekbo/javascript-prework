@@ -49,13 +49,24 @@ function displayResult(argComputerMove, argPlayerMove){
     }
 }
 
-function printMessage(msg){
+
+function printMessage(element, msg){
 	let div = document.createElement('div');
 	div.innerHTML = msg;
-	document.getElementById('messages').appendChild(div);
+	element.appendChild(div);
 }
 
 function clearMessages(){
-	document.getElementById('messages').innerHTML = '';
+	document.getElementById('result').innerHTML = '';
+	document.getElementById('computer-input').innerHTML = '';
+	document.getElementById('player-input').innerHTML = '';
+	document.getElementById('counter').innerHTML = '';
+    document.getElementById('computer-rock').style.display = "none";
+    document.getElementById('computer-paper').style.display = "none";
+    document.getElementById('computer-scissors').style.display = "none";
+    document.getElementById('player-rock').style.backgroundColor = "#81b29a";
+    document.getElementById('player-paper').style.backgroundColor = "#81b29a";
+    document.getElementById('player-scissors').style.backgroundColor = "#81b29a";
+    document.getElementById('result').style.color = "black";
 }
 
